@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>綠島觀光指南 - 手機優化版</title>
+    <style>
+        /* 基礎樣式設定 */
+        body {
+            font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
+            background-color: #f0fdf4;
+            margin: 0;
+            padding: 10px; /* 手機邊距縮小一點 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: #166534;
+            margin: 20px 0;
+            font-size: 1.5rem; /* 手機標題大小 */
+            text-align: center;
+        }
+
+        /* 網格容器 */
+        .container {
+            display: grid;
+            /* 預設手機版：1欄 */
+            grid-template-columns: 1fr; 
+            gap: 20px;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        /* 連結區域樣式 */
+        .spot-link {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* 景點卡片樣式 */
+        .spot {
+            background: white;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            transition: transform 0.2s;
+            overflow: hidden;
+        }
+
+        .spot h2 {
+            font-size: 1.1rem;
+            color: #15803d;
+            margin-top: 0;
+            margin-bottom: 12px;
+            border-left: 4px solid #22c55e;
+            padding-left: 10px;
+            text-align: left;
+        }
+
+        .spot img {
+            width: 100%;
+            height: 220px; /* 手機圖片高度固定 */
+            object-fit: cover;
+            border-radius: 10px;
+            display: block;
+        }
+
+        /* --- 響應式關鍵：螢幕寬度超過 768px 時切換為 2 欄 --- */
+        @media (min-width: 768px) {
+            body { padding: 40px; }
+            h1 { font-size: 2rem; }
+            .container {
+                grid-template-columns: 1fr 1fr; /* 變回兩欄 */
+                gap: 30px;
+            }
+            .spot:hover {
+                transform: translateY(-8px); /* 電腦版才有的懸浮效果 */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>探索綠島之美</h1>
+
+    <div class="container">
+        <a href="https://www.facebook.com/share/17kWpD39N4/?mibextid=wwXIfr" target="_blank" class="spot-link">
+            <div class="spot">
+                <h2>活動照片</h2>
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="朝日溫泉">            </div>
+        </a>
+
+        <a href="https://lin.ee/aRdxp3a" target="_blank" class="spot-link">
+            <div class="spot">
+                <h2>聯繫我們</h2>
+                <img src="https://images.unsplash.com/photo-1500835556837-99ac94a94552?auto=format&fit=crop&w=600&q=80" alt="綠島燈塔">
+            </div>
+        </a>
+
+        <a href="https://www.instagram.com/greenzong.dive?igsh=MWR6dWVzcnI5NWMzOQ%3D%3D&utm_source=qr" target="_blank" class="spot-link">
+            <div class="spot">
+                <h2>綠島日常</h2>
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="大白沙">
+            </div>
+        </a>
+
+        <a href="https://www.facebook.com/share/17kWpD39N4/?mibextid=wwXIfr" target="_blank" class="spot-link">
+            <div class="spot">
+                <h2>活動介紹</h2>
+                <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcTc1qLmwNfGcQZ0Ddhnz6IpCsH1RcE_2cJ4yB_0nEqVvSU0d6THZJH-uQDOpfOu-s1g4v0NCSOvtq0SvNj16Bk5vDQ&s=19" alt="藍洞潛水">
+            </div>
+        </a>
+    </div>
+
+</body>
+</html>
